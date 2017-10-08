@@ -4,37 +4,12 @@ import Ionicons from 'react-native-vector-icons/Ionicons'
 import { Platform } from 'react-native'
 
 import Books from './src/components/Books'
-//import Donate from './src/components/Donate'
 import BookDetail from './src/components/BookDetail'
 import ReadBook from './src/components/ReadBook'
 
 export default StackNavigator({
   Home: {
     screen: TabNavigator({
-      //Donate: { 
-        //screen: Donate,
-        //navigationOptions: {
-          //title: 'Донейшн',
-          //tabBarLabel: 'Донейшн',
-          //tabBarIcon: ({ tintColor, focused }) => (
-            //<Ionicons
-              //name={focused ? 'ios-heart' : 'ios-heart-outline'}
-              //size={26}
-              //style={{ color: tintColor }}
-            ///>
-          //),
-          //headerStyle: {
-            //backgroundColor: '#fff'
-          //},
-          //headerTitleStyle: {
-            //fontFamily: 'AppleSDGothicNeo-Light',
-            //fontSize: 16,
-            //fontWeight: '100',
-            //color: '#000'
-          //},
-          //headerTintColor: '#000',
-        //},
-      //},
       Books: { 
         screen: Books,
         navigationOptions: {
