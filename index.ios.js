@@ -3,10 +3,24 @@
  * https://github.com/facebook/react-native
  * @flow
  */
-
+import React, { Component } from 'react'
 import {
   AppRegistry,
 } from 'react-native'
 import App from './App'
+import codePush from 'react-native-code-push'
 
-AppRegistry.registerComponent('advayta', () => App)
+class Advayta extends Component {
+  componentDidMount() {
+    codePush.sync({ 
+      updateDialog: true,
+      installMode: codePush.InstallMode.IMMEDIATE
+    })
+  }
+
+  render () {
+    return <App />
+  }
+}
+
+AppRegistry.registerComponent('advayta', () => Advayta)
