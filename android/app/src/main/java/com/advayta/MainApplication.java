@@ -28,10 +28,18 @@ public class MainApplication extends Application implements ReactApplication {
 
     @Override
     protected List<ReactPackage> getPackages() {
+      // 3. Instantiate an instance of the CodePush runtime and add it to the list of
+      // existing packages, specifying the right deployment key. If you don't already
+      // have it, you can run "code-push deployment ls <appName> -k" to retrieve your key.
       return Arrays.<ReactPackage>asList(
-          new MainReactPackage(),
-            new CodePush(null, getApplicationContext(), BuildConfig.DEBUG)
+              new MainReactPackage(),
+              new CodePush("1X3FmoVFcuZHrxuRORTE055iICSk561d7e75-9c8c-483a-b2ef-4bfda4d4bd1d", MainApplication.this, BuildConfig.DEBUG)
       );
+    }
+
+    @Override
+    protected String getJSMainModuleName() {
+      return "index";
     }
   };
 

@@ -19,6 +19,7 @@
 {
   NSURL *jsCodeLocation;
 
+<<<<<<< ours
   
     #ifdef DEBUG
         jsCodeLocation = [CodePush bundleURL];
@@ -26,6 +27,9 @@
     #else
         jsCodeLocation = [[RCTBundleURLProvider sharedSettings] jsBundleURLForBundleRoot:@"index.ios" fallbackResource:nil];
     #endif
+=======
+  jsCodeLocation = [[RCTBundleURLProvider sharedSettings] jsBundleURLForBundleRoot:@"index" fallbackResource:nil];
+>>>>>>> theirs
 
   RCTRootView *rootView = [[RCTRootView alloc] initWithBundleURL:jsCodeLocation
                                                       moduleName:@"advayta"
